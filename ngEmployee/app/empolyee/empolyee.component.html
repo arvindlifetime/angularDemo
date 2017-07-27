@@ -1,0 +1,13 @@
+
+
+<h3>{{title}}</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr><td>Code</td><td>Name</td><td>Gender</td><td>DateOfBirth</td><td>Department</td><td>Post</td><td>Salary</td></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.empCode}}</td><td>{{emp.empName}}</td><td>{{emp.gender}}</td><td>{{emp.dob|date:"dd-MM-y"}}</td><td>{{emp.deptname}}</td><td>{{emp.desig}}</td><td>{{emp.salary|currency:"INR":1.00}}</td>
+    </tr>
+  </tbody>
+</table>
