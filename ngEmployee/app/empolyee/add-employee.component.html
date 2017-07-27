@@ -1,5 +1,8 @@
-<h3>{{title}}</h3>
-<table class="table table-bordered">  
+
+<div class="panel panel-primary"> 
+  <div class="panel-heading"><h3>{{title}}</h3></div>
+  <div class="panel-body">
+    <table class="table table-bordered">  
     <tr>
       <td>Name: {{empname}}</td><td><input type="text" maxlength="50" ngClass="form-control" [(ngModel)]="empname"/></td>
     </tr>  
@@ -39,4 +42,8 @@
       </td>
     </tr>
 </table>
+  </div>
+</div>
+
+
 
