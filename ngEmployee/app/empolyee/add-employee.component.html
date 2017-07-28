@@ -1,49 +1,52 @@
-
-<div class="panel panel-primary"> 
-  <div class="panel-heading"><h3>{{title}}</h3></div>
-  <div class="panel-body">
-    <table class="table table-bordered">  
-    <tr>
-      <td>Name: {{empname}}</td><td><input type="text" maxlength="50" ngClass="form-control" [(ngModel)]="empname"/></td>
-    </tr>  
-     <tr>
-      <td>Gender: <label *ngIf="showG">{{gender}}</label></td><td>
-        <select class="form-control" [(ngModel)]="gender" (change)="genderOnChange()">
+<div class="card card-outline-primary">
+  <div class="card-block">
+    <h3 class="card-title">{{title}}</h3>
+     <h6 class="card-subtitle mb-2 text-muted">Insert employee record.</h6>
+    <table class="table table-sm">
+      <tr>
+        <td>Name: {{empname}}</td>
+        <td><input type="text" maxlength="50" ngClass="form-control" [(ngModel)]="empname" /></td>
+      </tr>
+      <tr>
+        <td>Gender: <label *ngIf="showG">{{gender}}</label></td>
+        <td>
+          <select class="form-control" [(ngModel)]="gender" (change)="genderOnChange()">
           <option value="0">-Select-</option>
           <option value="MALE">Male</option>
           <option value="FEMALE">Female</option>
         </select></td>
-    </tr>
-     <tr>
-      <td>Date Of Birth</td><td><input type="text" maxlength="6" class="form-control"/></td>
-    </tr>
-     <tr>
-      <td>Department</td><td>
-        <select class="form-control" [(ngModel)]="deptname" (change)="deptOnChange()">
+      </tr>
+      <tr>
+        <td>Date Of Birth</td>
+        <td><input type="text" maxlength="6" class="form-control" /></td>
+      </tr>
+      <tr>
+        <td>Department</td>
+        <td>
+          <select class="form-control" [(ngModel)]="deptname" (change)="deptOnChange()">
           <option value="0">-Select-</option>
           <option *ngFor="let dept of deptList">{{dept}}</option>
         </select>
-      </td>
-    </tr>
-     <tr>
-      <td>Designation</td><td>
-         <select class="form-control" [(ngModel)]="designame" (change)="desigOnChange()">
+        </td>
+      </tr>
+      <tr>
+        <td>Designation</td>
+        <td>
+          <select class="form-control" [(ngModel)]="designame" (change)="desigOnChange()">
           <option value="0">-Select-</option>
           <option *ngFor="let desig of desigList">{{desig}}</option>
         </select>
-      </td>
-    </tr>
-     <tr>
-      <td>Salary</td><td><input type="text" maxlength="6" class="form-control"/></td>
-    </tr>
-     <tr>
-      <td colspan="2">
-        <input type="submit" value="Submit" class="btn btn-success">
-      </td>
-    </tr>
-</table>
+        </td>
+      </tr>
+      <tr>
+        <td>Salary</td>
+        <td><input type="text" maxlength="6" class="form-control" /></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Submit" class="btn btn-success">
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
-
-
-

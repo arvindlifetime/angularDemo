@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'emp-empolyee',
-  templateUrl: './empolyee.component.html'
+  selector: 'emp-list',
+  templateUrl: './empolyeeList.component.html'
 })
-export class EmpolyeeComponent {
+export class EmpolyeeListComponent {
   employees: Employee[];
   title:string="List";
   constructor() {

@@ -1,9 +1,10 @@
 
-
-<h3>{{title}}</h3>
-<table class="table table-bordered">
+<div class="card">
+  <div class="card-block">
+<div class="card-title"><h3>{{title}}</h3></div>
+<table class="table table-sm table-bordered">
   <thead>
-    <tr><td>Code</td><td>Name</td><td>Gender</td><td>DateOfBirth</td><td>Department</td><td>Post</td><td>Salary</td></tr>
+    <tr><th>Code</th><th>Name</th><th>Gender</th><th>DateOfBirth</th><th>Department</th><th>Post</th><th>Salary</th></tr>
   </thead>
   <tbody>
     <tr *ngFor="let emp of employees">
@@ -11,3 +12,5 @@
     </tr>
   </tbody>
 </table>
+  </div>
+</div>
